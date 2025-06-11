@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home – Music Playlist Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header with clickable title -->
+  <header class="site-header">
+    <div class="header-content">
+      <h1 class="site-title">
+        <a href="home.html">Music Playlist Explorer</a>
+      </h1>
+      <nav class="main-nav">
+        <a href="home.html" class="nav-link active">Home</a>
+        <a href="index.html" class="nav-link">All Playlists</a>
+        <a href="featured.html" class="nav-link">Featured Playlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section with GIF and typing text -->
+  <main class="home-hero">
+    <div class="gif-container">
+      <img src="assets/img/hero.gif" alt="Animated music background" />
+    </div>
+    <h1 id="typewriter"></h1>
+  </main>
+
+  <script>
+    const message = "Explore curated music playlists and discover your next favorite track!";
+    let idx = 0;
+    function typeWriter() {
+      if (idx < message.length) {
+        document.getElementById("typewriter").innerHTML += message.charAt(idx);
+        idx++;
+        setTimeout(typeWriter, 80);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", typeWriter);
+  </script>
+</body>
+</html>

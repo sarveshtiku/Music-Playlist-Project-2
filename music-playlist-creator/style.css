@@ -334,8 +334,9 @@ body {
 }
 .hero-bg {
   position: relative; height: 60vh; overflow: hidden;
+  
 }
-.hero-bg video {
+.hero-bg img {
   width: 100%; height: 100%; object-fit: cover;
   filter: brightness(0.6);
 }
@@ -397,4 +398,311 @@ body {
 /* Body text stays Roboto */
 body {
   font-family: var(--font-body);
+}
+
+/* Base: mobile-first, 1 column */
+.playlist-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+/* Force 3 cards per row, wrapping into further rows as needed */
+.playlist-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* match your existing gutter */
+}
+
+.like-count {
+  color: #000 !important;
+}
+
+/* lay out the modal as two columns */
+.modal-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;             /* space between the two columns */
+}
+
+/* keep the header (image + meta) from shrinking */
+.modal-header {
+  flex-shrink: 0;
+  margin-bottom: 0;      /* kill any old bottom margin */
+}
+
+/* make the body (songs) fill the remaining space */
+.modal-body {
+  flex: 1;
+  margin-top: 0;         /* reset so it sits at the top of the column */
+}
+/* Base: 1 column on very small screens */
+.playlist-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+/* ≥600px: 2 columns */
+@media (min-width: 600px) {
+  .playlist-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ≥900px: 3 columns */
+@media (min-width: 900px) {
+  .playlist-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* On small screens, stack the modal sections vertically */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+  }
+
+  /* give breathing room between image/meta and songs */
+  .modal-header {
+    margin-bottom: 1.5rem;
+  }
+
+  /* make sure the song list sits flush after the header */
+  .modal-body {
+    margin-top: 0;
+  }
+}
+/* Modal song rows: left-align title & artist */
+.song {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* <-- left-align the two lines */
+  text-align: left;         /* <-- ensure text is flush left */
+  flex: 1;                  /* <-- take up remaining space */
+}
+
+.song-title,
+.song-artist {
+  margin: 0;                /* <-- reset any extra margins */
+}
+
+/* Make modal a 2-column layout, equal widths */
+.modal-content {
+  display: flex;
+  align-items: stretch; /* stretch children to same height */
+}
+
+/* Left column: cover art, fills half */
+.modal-header {
+  flex: 1;
+  padding: 0;         /* remove extra spacing */
+}
+
+/* Right column: the songs list + buttons */
+.modal-body {
+  flex: 1;
+  padding: 1rem;      /* keep your existing padding if desired */
+}
+
+/* Make the cover image fill its column */
+.modal-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px 0 0 4px;  /* round only the left corners */
+}
+
+/* Hide the author name */
+.modal-creator {
+  display: none;
+}
+/* Ensure both columns stretch to the same height */
+.modal-content {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Make the right column a flex container */
+.modal-body {
+  flex: 1;                    /* fill half the modal */
+  display: flex;
+  flex-direction: column;
+  /* OPTION A: Center a short list vertically */
+  justify-content: center;
+  /* OPTION B: Instead of centering, let it scroll if it overflows:
+     uncomment the lines below and remove justify-content: center; */
+/* overflow-y: auto;
+   padding-right: 1rem;  /* keep a little breathing room for the scrollbar *\/
+*/
+}
+
+/* Then make the <ul> take up available space if you’re using scrolling */
+.modal-body .song-list {
+  flex: 1;
+}
+/* Hide the “Sarvesh T” line */
+.playlist-creator {
+  display: none;
+}
+
+/* Center & bump up the title */
+.playlist-info {
+  text-align: center;
+}
+.playlist-title {
+  font-size: 1.5rem;          /* larger title */
+  margin: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+/* On hover, change title to a complementary gold */
+.playlist-card:hover .playlist-title {
+  color: #f1c40f;
+  cursor: pointer;
+}
+
+/* turn playlist-info into a column flex-container */
+.playlist-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* center titles & any other elements by default */
+}
+
+/* override the like-container to align to the left */
+.playlist-info .like-container {
+  align-self: flex-start;  /* push it over to the left edge */
+  margin-top: auto;        /* keep it at the bottom of the column */
+}
+/* center the heart+count under the title and nudge it up */
+.playlist-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playlist-info .like-container {
+  /* override the old align-self and margin-top:auto */
+  align-self: center !important;
+  margin-top: -0.5rem !important;  /* pull it up half a rem */
+}
+
+
+.shuffle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #C59D5F;       /* warm gold/brown complement */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.shuffle-button:hover {
+  background-color: #D4AF37;       /* lighter gold on hover */
+  transform: translateY(-2px);     /* subtle lift */
+}
+
+/* bump space between title and like-count */
+.playlist-title {
+  margin-bottom: 0.75rem;  /* increase from default 0.5rem */
+}
+
+/* bump space above the heart row */
+.like-container {
+  margin-top: 0.75rem;  
+}
+
+/* (optional) heavier line‐height for multi‐line text */
+.playlist-info {
+  line-height: 1.9;
+}
+/* Apply EB Garamond to modal headings, song text, and the shuffle button */
+:root {
+  --font-heading: 'EB Garamond', serif;
+}
+
+.shuffle-button,
+.song-title,
+.song-artist,
+.modal-title {
+  font-family: var(--font-heading);
+}
+.song-list em {
+  font-family: var(--font-heading);
+}
+.song-controls {
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-left: auto;  /* push them over to the right */
+}
+.btn-play, .btn-skip {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s;
+}
+.btn-play:hover, .btn-skip:hover {
+  color: #f1c40f;   /* your gold accent */
+}
+/* Hero with GIF background */
+.hero-bg {
+  position: relative;
+  height: 60vh;                       /* or whatever height you like */
+  background: url('assets/back.gif')  /* path to your GIF */
+              center center / cover   /* center & cover the container */
+              no-repeat;
+  overflow: hidden;
+}
+
+/* Darken it a bit and keep your overlay text readable */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);     /* tweak opacity to taste */
+}
+.hero-overlay {
+  position: relative; /* above the dark layer */
+  z-index: 1;
+}
+/* Search input in header */
+#search-input {
+  margin-left: 2rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  width: 200px;
+  transition: border-color 0.2s;
+}
+
+#search-input:focus {
+  border-color: #C59D5F;
+  outline: none;
+  box-shadow: 0 0 4px rgba(197, 157, 95, 0.5);
+}
+/* Make the site title thinner */
+.site-title {
+  font-weight: 500;   /* or try 300 if you want even lighter */
+}
+.site-title a {
+  color: inherit;       /* keep the same white (or whatever) */
+  text-decoration: none;
+  font-family: var(--font-heading); /* EB Garamond */
+  font-weight: 400;     /* your lighter heading weight */
 }

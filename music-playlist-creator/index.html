@@ -1,57 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title & Favicon -->
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
+
     <!-- Google Fonts -->
-     <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?
-  family=EB+Garamond:wght@400;600&
-  family=Montserrat:wght@500;700&
-  family=Roboto:wght@400;500&display=swap"
-rel="stylesheet">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Header with navigation -->
+    <!-- =========================
+         Header & Navigation
+    ========================== -->
     <header class="site-header">
-      <div class="header-content">
-        <h1 class="site-title">Music Playlist Explorer</h1>
-        <nav class="main-nav">
-          <a href="index.html" class="nav-link active">All Playlists</a>
-          <a href="featured.html" class="nav-link">Featured Playlist</a>
-        </nav>
-      </div>
-    </header>
+  <div class="header-content">
+    <h1 class="site-title">
+  <a href="index.html">Music Playlist Explorer</a>
+</h1>
 
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link active">All Playlists</a>
+      <a href="featured.html" class="nav-link">Featured Playlist</a>
+    </nav>
+    <!-- 🔍 SEARCH BAR -->
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search playlists..."
+      aria-label="Search playlists by name or author"
+    />
+  </div>
+</header>
+
+
+    <!-- =========================
+         Hero Section with Video
+    ========================== -->
     <div class="hero-bg">
-  <video autoplay muted loop src="assets/ambient-loop.mp4"></video>
   <div class="hero-overlay">
     <h1>Music Playlist Explorer</h1>
-    <!-- nav here if you like -->
+    <!-- any other overlay content -->
   </div>
 </div>
 
 
-    <!-- Main section: playlist grid -->
+    <!-- =========================
+         Main Content: Playlist Grid
+    ========================== -->
     <main>
       <section class="playlist-cards">
-        <!-- JS will inject cards here dynamically -->
+        <!-- JS will inject playlist cards here dynamically -->
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- =========================
+         Footer
+    ========================== -->
     <footer>
       <p>© 2024 Music Playlist Explorer</p>
     </footer>
 
-    <!-- Modal overlay (hidden by default) -->
+    <!-- =========================
+         Modal Overlay (hidden by default)
+    ========================== -->
     <div class="modal-overlay" hidden>
       <div class="modal-content">
         <button class="modal-close" aria-label="Close modal">&times;</button>
@@ -70,6 +90,9 @@ rel="stylesheet">
       </div>
     </div>
 
+    <!-- =========================
+         Scripts
+    ========================== -->
     <script src="script.js"></script>
   </body>
 </html>
