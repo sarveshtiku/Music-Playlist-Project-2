@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Playlist Explorer</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <!-- Your header content here -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+     <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?
+  family=EB+Garamond:wght@400;600&
+  family=Montserrat:wght@500;700&
+  family=Roboto:wght@400;500&display=swap"
+rel="stylesheet">
+
+
+  </head>
+  <body>
+    <!-- Header with navigation -->
+    <header class="site-header">
+      <div class="header-content">
+        <h1 class="site-title">Music Playlist Explorer</h1>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link active">All Playlists</a>
+          <a href="featured.html" class="nav-link">Featured Playlist</a>
+        </nav>
+      </div>
     </header>
 
-    <main> 
-        <!-- Your main content here -->
+    <div class="hero-bg">
+  <video autoplay muted loop src="assets/ambient-loop.mp4"></video>
+  <div class="hero-overlay">
+    <h1>Music Playlist Explorer</h1>
+    <!-- nav here if you like -->
+  </div>
+</div>
+
+
+    <!-- Main section: playlist grid -->
+    <main>
+      <section class="playlist-cards">
+        <!-- JS will inject cards here dynamically -->
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <!-- Your footer content here -->
+      <p>© 2024 Music Playlist Explorer</p>
     </footer>
-    <script src="data/data.js"></script>
+
+    <!-- Modal overlay (hidden by default) -->
+    <div class="modal-overlay" hidden>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <div class="modal-header">
+          <img src="" alt="Playlist Cover" class="modal-cover" />
+          <div class="modal-info">
+            <h2 class="modal-title"></h2>
+            <p class="modal-creator"></p>
+          </div>
+        </div>
+        <div class="modal-body">
+          <h3>Songs</h3>
+          <button class="shuffle-button">🔀 Shuffle</button>
+          <ul class="song-list"></ul>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

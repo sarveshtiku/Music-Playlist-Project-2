@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Featured Playlist – Music Playlist Explorer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <h1 class="site-title">Music Playlist Explorer</h1>
+      <nav class="main-nav">
+  <a href="./index.html" class="nav-link">All Playlists</a>
+  <a href="./featured.html" class="nav-link">Featured Playlist</a>
+</nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="featured-container">
+      <!-- JS will inject your featured playlist -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Music Playlist Explorer</p>
+  </footer>
+
+  <script>
+    // featured.js inlined
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('data/data.json')
+        .then(r => r.json())
+        .then(json => {
+          const pls = json.playlists;
+          const pl = pls[Math.floor(Math.random() * pls.length)];
+          render(pl);
+        })
+        .catch(console.error);
+
+      function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+      }
+
+      function render(pl) {
+        const out = document.querySelector('.featured-container');
+        out.innerHTML = `
+          <div class="modal-content featured">
+            <div class="modal-header">
+              <img src="${pl.playlist_art}" alt="${pl.playlist_name}" class="modal-cover">
+              <div class="modal-info">
+                <h2 class="modal-title">${pl.playlist_name}</h2>
+                <p class="modal-creator">${pl.playlist_author}</p>
+              </div>
+            </div>
+            <div class="modal-body">
+              <h3>Songs</h3>
+              <button class="shuffle-button">🔀 Shuffle</button>
+              <ul class="song-list">
+                ${pl.songs.map(s => `
+                  <li class="song">
+                    <span class="song-title">${s.title}</span>
+                    <span class="song-artist-duration">${s.artist} • ${s.duration}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          </div>
+        `;
+        out.querySelector('.shuffle-button').onclick = () => {
+          shuffle(pl.songs);
+          render(pl);
+        };
+      }
+    });
+  </script>
+</body>
+</html>

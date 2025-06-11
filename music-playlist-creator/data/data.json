@@ -1,0 +1,69 @@
+{
+  "playlists": [
+    {
+      "playlist_name": "Monsoon Melodies",
+      "playlist_author": "Sarvesh T",
+      "playlist_art": "assets/img/monsoon.jpg",
+      "likes": 0,
+      "songs": [
+        { "title": "Safarnama",         "artist": "Lucky Ali",            "duration": "4:23" },
+        { "title": "Cold/Mess",         "artist": "Prateek Kuhad",        "duration": "5:00" },
+        { "title": "Train Journey",     "artist": "Unknown Artist",       "duration": "3:42" }
+      ]
+    },
+    {
+      "playlist_name": "Soulful Strings",
+      "playlist_author": "Sarvesh T",
+      "playlist_art": "assets/img/sitar.jpg",
+      "likes": 0,
+      "songs": [
+        { "title": "Tera Zikr",                     "artist": "Darshan Raval",           "duration": "4:22" },
+        { "title": "Yeh Raatein Yeh Mausam",        "artist": "Sanam",                   "duration": "3:57" }
+      ]
+    },
+    {
+      "playlist_name": "Evening Raga",
+      "playlist_author": "Sarvesh T",
+      "playlist_art": "assets/img/evening-raga.jpg",
+      "likes": 0,
+      "songs": [
+        { "title": "Raanjhanaa",       "artist": "Ankit Tiwari",       "duration": "4:38" },
+        { "title": "Mann Meri Jaan",    "artist": "King",               "duration": "4:15" },
+        { "title": "Tum Mile",          "artist": "Neha Kakkar",        "duration": "3:50" }
+      ]
+    },
+    {
+      "playlist_name": "Urban Beats",
+      "playlist_author": "Sarvesh T",
+      "playlist_art": "assets/img/urban-beats.jpg",
+      "likes": 0,
+      "songs": [
+        { "title": "Aise Kyun",                   "artist": "Ritviz",                       "duration": "3:33" },
+        { "title": "Kho Gaye Hum Kahan",          "artist": "Prateek Kuhad & Jasleen Royal","duration": "4:10" },
+        { "title": "Vibe Hai",                   "artist": "Nucleya x Ritviz",            "duration": "2:45" }
+      ]
+    },
+    {
+      "playlist_name": "Tranquil Tabla",
+      "playlist_author": "Sarvesh T",
+      "playlist_art": "assets/img/tranquil-tabla.jpg",
+      "likes": 0,
+      "songs": [
+        { "title": "Tabla Theme",        "artist": "Zakir Hussain",    "duration": "5:12" },
+        { "title": "Rhythms of India",   "artist": "Anoushka Shankar", "duration": "4:05" },
+        { "title": "Sahara",             "artist": "Karsh Kale",       "duration": "3:58" }
+      ]
+    },
+    {
+      "playlist_name": "Flowing Flute",
+      "playlist_author": "Sarvesh T",
+      "playlist_art": "assets/img/flute.jpg",
+      "likes": 0,
+      "songs": [
+        { "title": "Morning Breeze",     "artist": "Hariprasad Chaurasia", "duration": "6:20" },
+        { "title": "Raga Puria Dhanashree","artist": "Ronu Majumdar",       "duration": "5:45" },
+        { "title": "Ganesha Vandana",    "artist": "Rakesh Chaurasia",     "duration": "4:30" }
+      ]
+    }
+  ]
+}
