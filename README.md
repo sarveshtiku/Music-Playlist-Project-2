@@ -2,9 +2,9 @@
 
 Submitted by: **Sarvesh Tiku**
 
-Estimated time spent: **10** hours spent in total
+Estimated time spent: **5** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+<img width="1188" alt="Screenshot 2025-06-12 at 09 35 57" src="https://github.com/user-attachments/assets/af4d32c1-2ae3-4972-a4ff-72ff832af53b" />
 
 ### Application Features
 
