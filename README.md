@@ -133,7 +133,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 ## First Part:
 https://www.loom.com/share/dbe490ab40ca4b98bbd50352b6326b89?sid=9b2ce5cf-a07c-4228-98f7-039b0c604c2d
 ## Second Part:
-
+https://www.loom.com/share/406e93bfe835491f8d97637bd900c40f?sid=e401d28d-c287-4550-9f20-aeb2cdefa946
 
 
 ## Reflection
