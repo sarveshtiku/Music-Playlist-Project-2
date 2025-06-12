@@ -163,4 +163,11 @@ Yes, the weekly labs on DOM manipulation, event handling, and working with JSON 
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Big shout out to Alex, Devarsh, Keith, and Lucia—and also my co-scholar Paula! Thanks for all the support and feedback throughout the project 🙏
+
+### Screenshots from the website:
+<img width="809" alt="Screenshot 2025-06-11 at 20 12 35" src="https://github.com/user-attachments/assets/9dc07550-a0ce-4c9f-a5bb-9a05d8f810c7" />
+<img width="808" alt="Screenshot 2025-06-11 at 20 12 48" src="https://github.com/user-attachments/assets/c9002315-725e-4caa-b83f-6ec54d450428" />
+![Uploading Screenshot 2025-06-11 at 20.13.03.png…]()
+
+
