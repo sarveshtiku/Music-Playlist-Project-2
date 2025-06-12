@@ -706,3 +706,154 @@ body {
   font-family: var(--font-heading); /* EB Garamond */
   font-weight: 400;     /* your lighter heading weight */
 }
+/* 1) Make all modal text use EB Garamond & black */
+#add-modal,
+#add-modal * {
+  font-family: 'EB Garamond', serif;
+  color: #111;               /* dark charcoal */
+}
+
+/* 2) Enlarge the modal container */
+#add-modal .modal-content {
+  max-width: 600px;          /* a bit wider */
+  width: 90%;
+  padding: 2rem;             /* more breathing room */
+}
+
+/* 3) Lay out your form inputs in a neat two-column grid */
+#add-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+/* 4) Make labels block-level and inputs full width */
+#add-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+#add-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 5) Span the song-list container across both columns */
+#songs-list {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  /* title, artist, duration */
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+#songs-list .song-input-row {
+  display: contents;  /* allow its children to flow into the parent grid */
+}
+
+/* 6) Style your buttons */
+#add-song-btn,
+#add-form button[type="submit"] {
+  grid-column: 1 / -1;       /* full width */
+  padding: 0.75rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  background: #C59D5F;        /* your gold accent */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+#add-song-btn:hover,
+#add-form button[type="submit"]:hover {
+  background: #D4AF37;
+}
+
+/* 7) Tweak heading in the modal */
+#add-modal h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* 8) Close-button position */
+#add-modal .modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+/* Make the form labels larger */
+#add-form label {
+  font-size: 1.125rem;    /* ~18px */
+  font-weight: 600;       /* a bit bolder if you like */
+}
+
+/* If you also want your input placeholders slightly bigger */
+#add-form input::placeholder {
+  font-size: 1rem;        /* ~16px */
+  opacity: 0.7;           /* a little subtle */
+}
+#add-modal h2 {
+  font-size: 2rem;        /* ~32px */
+}
+/* style.css */
+
+.playlist-info {
+  position: relative;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.delete-button:hover {
+  opacity: 1;
+}
+.playlist-author {
+  color: #000;           /* black text */
+  font-weight: 500;      /* semibold, adjust as you like */
+  margin-right: 0.5rem;  /* breathing room before the number */
+  font-family: 'EB Garamond', serif;  /* your EB Garamond font */
+}
+.like-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.like-count {
+  font-weight: 600;
+  color: #333;
+}
+.like-button .like-icon {
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--primary-gold); /* if you turn hearts gold on “liked” */
+}
+.site-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo / controls / nav spread */
+}
+
+/* ensure controls themselves are centered within their container */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

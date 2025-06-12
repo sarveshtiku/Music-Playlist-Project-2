@@ -44,7 +44,7 @@
       "playlist_name": "Urban Beats",
       "playlist_author": "Sarvesh T",
       "playlist_art": "assets/img/urban-beats.jpg",
-      "likes": 0,
+      "likes": 10,
       "songs": [
         { "title": "Kho Gaye",          "artist": "Prateek Kuhad", "duration": "4:10" },
         { "title": "Khaab",                       "artist": "Akhil",                   "duration": "4:20" },
@@ -57,7 +57,7 @@
       "playlist_name": "Tranquil Tabla",
       "playlist_author": "Sarvesh T",
       "playlist_art": "assets/img/tranquil-tabla.jpg",
-      "likes": 0,
+      "likes": 4,
       "songs": [
         { "title": "Journey",            "artist": "Trilok Gurtu",     "duration": "5:30" },
         { "title": "Pulse",              "artist": "Taiko Masters",    "duration": "4:40" },
@@ -70,7 +70,7 @@
       "playlist_name": "Flowing Flute",
       "playlist_author": "Sarvesh T",
       "playlist_art": "assets/img/flute.jpg",
-      "likes": 0,
+      "likes": 9,
       "songs": [
         { "title": "Jiyein Kyun",            "artist": "Papon",                 "duration": "4:02" },
         { "title": "Agar Tum Saath Ho",      "artist": "Alka Yagnik",           "duration": "4:51" },

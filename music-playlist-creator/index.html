@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- =========================
@@ -24,41 +27,52 @@
     <header class="site-header">
   <div class="header-content">
     <h1 class="site-title">
-  <a href="index.html">Music Playlist Explorer</a>
-</h1>
+      <a href="index.html">Music Playlist Explorer</a>
+    </h1>
+
+    <button id="btn-add-playlist" class="btn">＋ New Playlist</button>
 
     <nav class="main-nav">
       <a href="index.html" class="nav-link active">All Playlists</a>
       <a href="featured.html" class="nav-link">Featured Playlist</a>
     </nav>
-    <!-- 🔍 SEARCH BAR -->
-    <input
-      type="text"
-      id="search-input"
-      placeholder="Search playlists..."
-      aria-label="Search playlists by name or author"
-    />
+
+    <!-- move your controls into a centered wrapper -->
+    <div class="controls">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search by name or author"
+        aria-label="Search playlists"
+      />
+      <button id="btn-search">Search</button>
+      <button id="btn-clear">Clear</button>
+      <select id="sort-select">
+        <option value="">— Sort playlists —</option>
+        <option value="name">Name (A–Z)</option>
+        <option value="likes">Likes (desc.)</option>
+        <option value="date">Date added</option>
+      </select>
+    </div>
   </div>
 </header>
 
 
     <!-- =========================
-         Hero Section with Video
+         Hero Section (optional)
     ========================== -->
     <div class="hero-bg">
-  <div class="hero-overlay">
-    <h1>Music Playlist Explorer</h1>
-    <!-- any other overlay content -->
-  </div>
-</div>
-
+      <div class="hero-overlay">
+        <h1>Music Playlist Explorer</h1>
+      </div>
+    </div>
 
     <!-- =========================
          Main Content: Playlist Grid
     ========================== -->
     <main>
       <section class="playlist-cards">
-        <!-- JS will inject playlist cards here dynamically -->
+        <!-- JS injects playlist cards here -->
       </section>
     </main>
 
@@ -70,7 +84,7 @@
     </footer>
 
     <!-- =========================
-         Modal Overlay (hidden by default)
+         Detail Modal (hidden by default)
     ========================== -->
     <div class="modal-overlay" hidden>
       <div class="modal-content">
@@ -87,6 +101,38 @@
           <button class="shuffle-button">🔀 Shuffle</button>
           <ul class="song-list"></ul>
         </div>
+      </div>
+    </div>
+
+    <!-- =========================
+         Add / Edit Playlist Modal
+    ========================== -->
+    <div id="add-modal" class="modal-overlay" hidden>
+      <div class="modal-content form">
+        <button class="modal-close" aria-label="Close form">&times;</button>
+        <h2>Add / Edit Playlist</h2>
+        <form id="add-form">
+          <label>
+            Playlist Name<br />
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Author<br />
+            <input type="text" name="author" required />
+          </label>
+          <label>
+            Cover Image URL<br />
+            <input type="url" name="cover" placeholder="https://…jpg" />
+          </label>
+
+          <div id="songs-list">
+            <!-- JS will inject one or more song‐input rows here -->
+          </div>
+
+          <button id="add-song-btn" class="btn wide">＋ Add Song</button>
+          <br /><br />
+          <button type="submit" class="btn wide">Save Playlist</button>
+        </form>
       </div>
     </div>
 

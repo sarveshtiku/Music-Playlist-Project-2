@@ -1,17 +1,21 @@
-<!-- featured.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  />
   <title>Featured Playlist – Music Playlist Explorer</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header & nav -->
+  <!-- HEADER + NAVIGATION -->
   <header class="site-header">
     <div class="header-content">
-      <h1 class="site-title"><a href="index.html">Music Playlist Explorer</a></h1>
+      <h1 class="site-title">
+        <a href="index.html">Music Playlist Explorer</a>
+      </h1>
       <nav class="main-nav">
         <a href="index.html" class="nav-link">All Playlists</a>
         <a href="featured.html" class="nav-link active">Featured Playlist</a>
@@ -19,22 +23,26 @@
     </div>
   </header>
 
-  <!-- A single container; script will populate the overlay directly -->
+  <!-- FEATURED PLAYLIST CONTAINER -->
   <main>
     <section class="featured-container"></section>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2024 Music Playlist Explorer</p>
   </footer>
 
-  <!-- ONE modal overlay in the DOM -->
+  <!-- GLOBAL MODAL OVERLAY (hidden until opened by script) -->
   <div class="modal-overlay" hidden>
     <div class="modal-content">
       <button class="modal-close" aria-label="Close modal">&times;</button>
       <div class="modal-header">
-        <img src="" alt="Playlist Cover" class="modal-cover" />
+        <img 
+          src="" 
+          alt="Playlist Cover" 
+          class="modal-cover" 
+        />
         <div class="modal-info">
           <h2 class="modal-title"></h2>
         </div>
@@ -47,6 +55,7 @@
     </div>
   </div>
 
+  <!-- YOUR UNIFIED SCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>
