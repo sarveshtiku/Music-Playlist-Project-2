@@ -168,7 +168,6 @@ Big shout out to Alex, Devarsh, Keith, and Lucia—and also my co-scholar Paula!
 ### Screenshots from the website:
 <img width="809" alt="Screenshot 2025-06-11 at 20 12 35" src="https://github.com/user-attachments/assets/9dc07550-a0ce-4c9f-a5bb-9a05d8f810c7" />
 <img width="808" alt="Screenshot 2025-06-11 at 20 12 48" src="https://github.com/user-attachments/assets/c9002315-725e-4caa-b83f-6ec54d450428" />
-<img width="823" alt="Screenshot 2025-06-11 at 20 13 37" src="https://github.com/user-attachments/assets/2399f9c9-8f13-48c7-86b6-3459cd40f28c" />
 
 
 
